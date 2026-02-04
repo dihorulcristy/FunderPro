@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Prop Trading Daily Reviews - Honest FunderPro Review",
-  description: "An independent review of FunderPro. Is it the right choice for traders in 2026?",
+  title: "FunderProp - Independent FunderPro Review",
+  description: "Independent review of FunderPro. Unbiased analysis for traders.",
 };
 
 export default function RootLayout({

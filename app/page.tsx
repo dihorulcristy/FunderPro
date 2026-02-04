@@ -1,190 +1,174 @@
-import { CheckCircle2, ChevronRight, XCircle } from "lucide-react";
+import { AlertTriangle, BookOpen, Check, ExternalLink, Info, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   const affiliateLink = "https://funderpro.cxclick.com/visit/?bta=35241&brand=funderpro";
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans">
-      {/* Disclaimer Top Bar */}
-      <div className="bg-gray-100 py-2 border-b border-gray-200">
-        <div className="container mx-auto px-4 text-xs text-gray-500 text-center uppercase tracking-wide font-medium">
-          Advertorial. This is an independent review site.
-        </div>
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
+      {/* Top Compliance Bar */}
+      <div className="bg-slate-900 text-white py-2 text-xs text-center px-4">
+        <p className="flex items-center justify-center gap-2 opacity-90">
+          <Info className="w-3 h-3" />
+          <span>INDEPENDENT REVIEW SITE: This website is a review blog and is NOT the official FunderPro website.</span>
+        </p>
       </div>
 
-      {/* Header */}
-      <header className="bg-white border-b border-gray-100 py-5 sticky top-0 z-50">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="text-xl font-bold text-gray-900 tracking-tight">
-            Prop Trading <span className="text-orange-600">Daily Reviews</span>
+      {/* Navigation */}
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div className="container mx-auto px-4 h-16 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <div className="bg-indigo-600 text-white p-1.5 rounded-md font-bold text-lg leading-none">FP</div>
+            <div className="flex flex-col">
+              <span className="font-bold text-slate-900 leading-tight">FunderProp</span>
+              <span className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Prop Trading Reviews</span>
+            </div>
           </div>
-          <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-            <Link href="#review" className="hover:text-orange-600 transition-colors">Review</Link>
-            <Link href="#features" className="hover:text-orange-600 transition-colors">Features</Link>
-            <Link href="#verdict" className="hover:text-orange-600 transition-colors">Verdict</Link>
-          </nav>
+
+          <div className="hidden md:flex items-center gap-4 text-sm font-medium text-slate-600">
+            <span className="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-semibold">
+              Independent Analysis
+            </span>
+          </div>
         </div>
       </header>
 
-      <main>
-        {/* Hero / Headline */}
-        <section className="py-16 md:py-24 max-w-4xl mx-auto px-4 text-center">
-          <div className="inline-block bg-red-50 border border-red-100 p-4 rounded-xl mb-8 animate-pulse">
-            <p className="text-red-600 font-bold text-lg md:text-xl">
-              🔥 Limited Time Offer: 25% OFF All Challenges & Instant Funding!
-            </p>
-            <p className="text-sm text-red-500 mt-1">Use link below to claim discount</p>
+      <main className="container mx-auto px-4 py-10 max-w-4xl">
+
+        {/* Article Header */}
+        <div className="mb-10">
+          <div className="flex items-center gap-2 text-indigo-600 font-medium text-sm mb-4">
+            <BookOpen className="w-4 h-4" />
+            <span>Prop Firm Reviews</span>
+            <span>&rsaquo;</span>
+            <span>FunderPro</span>
           </div>
-          <br />
-          <span className="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full mb-6">
-            2026 UPDATE
-          </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-            Is FunderPro the Right Choice for Traders in 2026? <br className="hidden md:block" />
-            <span className="text-gray-500">An Honest Review</span>
+          <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            FunderPro Review (2026): Is It a Legitimate Prop Firm?
           </h1>
-          <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-            We break down the rules, scaling plans, and payouts to see if this prop firm lives up to the hype.
-          </p>
-          <div className="flex justify-center">
-            <a
-              href={affiliateLink}
-              className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center gap-2"
-            >
-              Visit Official FunderPro Website <ChevronRight size={20} />
-            </a>
+          <div className="flex items-center gap-4 text-sm text-slate-500 border-b border-slate-200 pb-8">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600">E</div>
+              <span>By Editorial Team</span>
+            </div>
+            <span>&bull;</span>
+            <span>Updated: February 2026</span>
           </div>
-        </section>
+        </div>
 
-        {/* Introduction */}
-        <section id="review" className="py-12 bg-white max-w-3xl mx-auto px-4">
-          <div className="prose prose-lg prose-gray mx-auto">
-            <p>
-              In the rapidly evolving world of proprietary trading, traders are constantly looking for reliability, fair conditions, and legitimate scaling opportunities. With so many firms popping up, it can be difficult to distinguish the serious contenders from the noise.
-            </p>
-            <p>
-              **FunderPro** has entered the market with a promise of "Real Funding" and a focus on removing the time pressure that often causes traders to fail. Unlike many competitors that impose strict time limits on their challenge phases, FunderPro offers unlimited time to complete the evaluation.
-            </p>
-            <p>
-              But is that enough to make them the best choice for you? This review takes an objective look at their offering, from their trading infrastructure to their payout policies.
-            </p>
-          </div>
-        </section>
+        <div className="grid md:grid-cols-3 gap-10">
+          {/* Main Content Column */}
+          <div className="md:col-span-2 space-y-8">
 
-        {/* Key Features */}
-        <section id="features" className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Key Features Breakdown</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-blue-600 font-bold text-xl">1</div>
-                <h3 className="font-bold text-xl mb-3">Unlimited Time</h3>
-                <p className="text-gray-600">No deadlines to hit profit targets. Traders can take as long as they need to pass the evaluation phases.</p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600 font-bold text-xl">2</div>
-                <h3 className="font-bold text-xl mb-3">Real Capital Scaling</h3>
-                <p className="text-gray-600">A clear plan to scale capital up to $5M for successful traders who consistently generate profits.</p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 text-purple-600 font-bold text-xl">3</div>
-                <h3 className="font-bold text-xl mb-3">Weekly Payouts</h3>
-                <p className="text-gray-600">Traders can request payouts on a weekly basis, improving cash flow compared to monthly competitors.</p>
-              </div>
+            {/* Quick Summary Box */}
+            <div className="bg-white p-6 rounded-lg border-l-4 border-indigo-500 shadow-sm">
+              <h2 className="font-bold text-xl text-slate-900 mb-2">Executive Summary</h2>
+              <p className="text-slate-600 leading-relaxed">
+                FunderPro is a newer entrant to the prop trading space offering "Real Capital" accounts. While they offer distinct advantages like unlimited trading time and weekly payouts, traders should be aware of the specific scaling requirements and evaluation rules before signing up.
+              </p>
+            </div>
+
+            <div className="prose prose-slate max-w-none">
+              <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">The Promise of Real Capital</h2>
+              <p className="mb-4">
+                Many prop firms typically operate on demo accounts even after a trader is "funded". FunderPro markets itself differently by emphasizing Real Capital scaling. This review examines whether their infrastructure supports professional trading effectively.
+              </p>
+
+              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">Key Features Analysis</h3>
+              <ul className="space-y-3 list-none pl-0">
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-600 shrink-0" />
+                  <span><strong>Unlimited Time Limit:</strong> This is a significant advantage for swing traders who need time for setups to play out.</span>
+                </li>
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-600 shrink-0" />
+                  <span><strong>Weekly Payouts:</strong> Cash flow is faster than the industry standard of bi-weekly or monthly payouts.</span>
+                </li>
+                <li className="flex gap-3">
+                  <Check className="w-5 h-5 text-green-600 shrink-0" />
+                  <span><strong>TradeLocker Platform:</strong> A modern alternative to MT4/MT5, though it may have a learning curve for some.</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
 
-        {/* Pros & Cons */}
-        <section id="verdict" className="py-16 bg-white border-t border-gray-100">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">The Verdict: Pros & Cons</h2>
-            <div className="grid md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-xl font-bold mb-6 text-green-700 flex items-center gap-2">
-                  <CheckCircle2 className="w-6 h-6" /> What We Like
-                </h3>
-                <ul className="space-y-4">
-                  {[
-                    "Unlimited trading period (No time pressure)",
-                    "Weekly payouts for funded traders",
-                    "Direct processing with top-tier liquidity providers",
-                    "Scaling plan up to $5,000,000",
-                    "Simple rules with no hidden consistency traps"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                      <span className="text-gray-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+          {/* Sidebar / CTA Column */}
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 sticky top-24">
+              <div className="text-center mb-6">
+                <span className="text-sm font-bold text-slate-400 uppercase">Review Score</span>
+                <div className="text-5xl font-extrabold text-indigo-600 my-2">4.5<span className="text-2xl text-slate-300">/5</span></div>
+                <div className="flex justify-center gap-1 text-yellow-400">
+                  {'★★★★☆'.split('').map((s, i) => <span key={i}>{s}</span>)}
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-bold mb-6 text-red-700 flex items-center gap-2">
-                  <XCircle className="w-6 h-6" /> Points to Consider
-                </h3>
-                <ul className="space-y-4">
-                  {[
-                    "Evaluation fee is required upfront (refundable upon first payout)",
-                    "Standard drawdown limits apply (must manage risk)",
-                    "News trading restrictions during high-impact events"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <XCircle className="w-5 h-5 text-red-400 mt-0.5 shrink-0" />
-                      <span className="text-gray-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+
+              {/* Special Offer Box */}
+              <div className="bg-red-50 border border-red-100 rounded-lg p-4 mb-6">
+                <p className="text-red-700 font-bold text-sm uppercase tracking-wide mb-1 text-center">Limited Offer</p>
+                <div className="text-center">
+                  <p className="text-2xl font-extrabold text-red-600">25% OFF</p>
+                  <p className="text-xs text-red-500 mb-2">All Challenges & Instant Accounts</p>
+                  <div className="bg-white border border-red-200 border-dashed rounded py-1 px-2 text-red-700 font-mono text-sm tracking-wider">
+                    NEWME20
+                  </div>
+                  <p className="text-[10px] text-red-400 mt-1">Use code at checkout</p>
+                </div>
               </div>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-slate-500">Credibility</span>
+                  <span className="font-bold text-slate-700">High</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-slate-500">Payout Speed</span>
+                  <span className="font-bold text-slate-700">Fast (Weekly)</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-slate-500">Platform</span>
+                  <span className="font-bold text-slate-700">TradeLocker</span>
+                </div>
+              </div>
+
+              <a
+                href={affiliateLink}
+                className="block w-full bg-slate-900 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors shadow-md flex items-center justify-center gap-2 group"
+              >
+                Visit Website <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+              <p className="text-xs text-center text-slate-400 mt-3">Link opens official FunderPro site</p>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Final CTA */}
-        <section className="py-20 bg-gray-900 text-white text-center">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-6">Ready to Start Your Trading Journey?</h2>
-            <p className="text-gray-400 mb-10 max-w-xl mx-auto">
-              If you value time flexibility and weekly payouts, FunderPro is a strong contender in 2026.
-            </p>
-            <a
-              href={affiliateLink}
-              className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-lg text-lg shadow-lg hover:shadow-orange-500/20 transition-all inline-flex items-center gap-2"
-            >
-              Visit Official FunderPro Website <ChevronRight />
-            </a>
+        {/* Disclaimer Section */}
+        <div className="mt-20 pt-10 border-t border-slate-200">
+          <div className="flex gap-4 p-4 bg-slate-100 rounded-lg text-sm text-slate-600">
+            <AlertTriangle className="w-6 h-6 text-slate-500 shrink-0" />
+            <div>
+              <p className="font-bold mb-1 text-slate-700">Advertiser Disclosure & Risk Warning</p>
+              <p>
+                <strong>FunderProp.com</strong> is an independent review hub and is not owned by or part of FunderPro. We may receive compensation if you click links on our site, but this does not influence our objective analysis.
+              </p>
+              <p className="mt-2">
+                Trading in financial markets involves a high degree of risk and exists the possibility of losing your initial deposit.
+              </p>
+            </div>
           </div>
-        </section>
+        </div>
+
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-50 border-t border-gray-200 py-12 text-sm text-gray-500">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="col-span-1 md:col-span-2">
-              <div className="font-bold text-gray-900 text-lg mb-4">Prop Trading Daily Reviews</div>
-              <p className="max-w-xs">Independent reviews and news for the proprietary trading industry. Helping traders make informed decisions.</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-gray-900">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-gray-900">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-gray-900">Disclaimer</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-4">Contact</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-gray-900">Contact Us</a></li>
-                <li><a href="#" className="hover:text-gray-900">Editorial Team</a></li>
-              </ul>
-            </div>
+      <footer className="bg-slate-900 text-slate-400 py-12 text-sm">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="font-bold text-white text-lg mb-2">FunderProp</div>
+            <p>Your source for independent prop firm reviews.</p>
           </div>
-          <div className="pt-8 border-t border-gray-200 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2026 Prop Trading Daily Reviews. All rights reserved.</p>
-            <p className="mt-4 md:mt-0 italic">This site contains affiliate links.</p>
+          <div className="md:text-right">
+            <p className="mb-2">&copy; 2026 FunderProp. All rights reserved.</p>
+            <p className="text-xs text-slate-500">Not affiliated with FunderPro Official.</p>
           </div>
         </div>
       </footer>
